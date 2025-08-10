@@ -1,2 +1,6 @@
 selenium
 pytest
+pytest-html
+pytest-order
+pytest-metadata
+webdriver-manager
