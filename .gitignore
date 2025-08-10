@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment
+env/
+venv/
+
+# PyTest reports
+reports/
+*.html
+
+# Logs & screenshots
+logs/
+screenshots/
+
+# OS-specific files
+.DS_Store
+Thumbs.db

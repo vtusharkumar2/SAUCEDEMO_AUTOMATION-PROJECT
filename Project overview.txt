@@ -1,0 +1,25 @@
+Selenium Python
+
+small sample project
+
+
+implementing POM| Unit Tests| HTML reports
+
+Step by Step
+
+We will do this hands-on:
+    1.   Create a simple login test
+    2.   Implement unit testing
+    3.   Implement Page Object Model
+    4.   Separate test scripts and objects
+    5.   Create a separate class for Locators
+    6.   Run from command line
+    7.   Add HTML Reports
+
+
+website used
+
+https://pypi.org/project/selenium/
+https://pypi.org/project/html-testRun...
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
