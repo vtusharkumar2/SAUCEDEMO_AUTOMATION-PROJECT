@@ -13,7 +13,7 @@ def driver():
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--incognito")
 
-    # ✅ Completely disable password manager prompts
+    # ✅ Disable password manager popups
     prefs = {
         "credentials_enable_service": False,
         "profile.password_manager_enabled": False,
@@ -22,15 +22,15 @@ def driver():
     }
     chrome_options.add_experimental_option("prefs", prefs)
 
-    # ✅ Disable "Chrome is being controlled by automated software" info bar
+    # ✅ Remove "Chrome is being controlled by automated software" banner
     chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     chrome_options.add_experimental_option("useAutomationExtension", False)
 
-    # ✅ Additional flags to minimize automation detection
+    # ✅ Reduce detection by sites
     chrome_options.add_argument("--disable-blink-features")
     chrome_options.add_argument("--disable-blink-features=AutomationControlled")
 
-    # ✅ Launch browser with ChromeDriverManager
+    # ✅ Launch browser
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
     driver.implicitly_wait(10)
 
@@ -39,7 +39,7 @@ def driver():
     print("\n[Teardown] Quitting browser...")
     driver.quit()
 
-# ✅ Capture screenshot on failure
+# ✅ Automatically take screenshot on test failure
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     outcome = yield
