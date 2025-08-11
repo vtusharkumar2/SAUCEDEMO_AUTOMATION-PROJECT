@@ -1,6 +1,3 @@
-selenium
-pytest
-pytest-html
-pytest-order
-pytest-metadata
-webdriver-manager
+selenium==4.15.2
+pytest==8.2.1
+webdriver-manager==4.0.1
