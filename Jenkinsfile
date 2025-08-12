@@ -6,7 +6,7 @@ pipeline {
             steps {
                 bat 'python --version'
                 bat 'pip install --upgrade pip'
-                bat pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
 
