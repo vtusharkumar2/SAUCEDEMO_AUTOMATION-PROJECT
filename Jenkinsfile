@@ -4,15 +4,15 @@ pipeline {
     stages {
         stage('Setup Python') {
             steps {
-                sh 'python --version'
-                sh 'pip install --upgrade pip'
-                sh 'pip install -r requirements.txt'
+                bat 'python --version'
+                bat 'pip install --upgrade pip'
+                bat pip install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'pytest --disable-warnings --maxfail=1'
+                bat 'pytest --disable-warnings --maxfail=1'
             }
         }
     }
