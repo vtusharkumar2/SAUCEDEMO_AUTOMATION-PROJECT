@@ -1,5 +1,10 @@
-import pytest
+from utilities.utils import capture_screenshot
 
 def test_fail_example(driver):
     driver.get("https://www.saucedemo.com/")
-    assert "This text does not exist" in driver.page_source  # This will fail
+
+    # ✅ Take a screenshot without forcing a test failure
+    capture_screenshot(driver, "manual_screenshot_example")
+
+    # ✅ Use a passing assertion
+    assert "Swag Labs" in driver.title
