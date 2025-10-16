@@ -14,7 +14,7 @@ The framework is clean, modular, and easily extendable for other e-commerce or w
 - **Selenium WebDriver** - browser automation
 - **PyTest HTML Plugin** - HTML reports
 - **WebDriver Manager** - auto-manages ChromeDriver
-- **Jenkins** - CI/CD integration (optional)
+- **Jenkins** - CI/CD integratioN
 - **POM (Page Object Model)** - maintainable structure
 
 ---
@@ -100,6 +100,6 @@ To run this project on **Jenkins**:
 ---
 
 ## 👨‍💻 Author
-**Your Name**  
-📧 your.email@example.com  
-💼 [LinkedIn Profile](https://linkedin.com/in/yourprofile)  
+**V TUSHAR KUMAR**  
+📧 vtusharkumar2@gmail.com  
+💼 [LinkedIn Profile](https://linkedin.com/in/vtusharkumar2)  

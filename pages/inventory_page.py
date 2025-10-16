@@ -2,16 +2,16 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
 class InventoryPage:
-    add_to_cart_button = (By.CLASS_NAME, "btn_inventory")
+    add_to_cart_button = (By.ID, "add-to-cart-sauce-labs-backpack")
     cart_icon = (By.CLASS_NAME, "shopping_cart_badge")
 
     def __init__(self, driver):
         self.driver = driver
-        self.add_to_cart_button = ("id", "add-to-cart-sauce-labs-backpack")  # <- correct locator
+        self.add_to_cart_button = (By.ID, "add-to-cart-sauce-labs-backpack")  # <- correct locator
      
     def add_to_cart_by_product_id(self, product_id):
         print(f"[InventoryPage] Adding to cart: {product_id}")
-        self.driver.find_element("id", f"add-to-cart-{product_id}").click()
+        self.driver.find_element(By.ID, f"add-to-cart-{product_id}").click()
     
     def add_to_cart_backpack(self):
         print("[InventoryPage] Adding backpack to cart...")

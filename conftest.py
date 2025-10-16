@@ -1,8 +1,8 @@
+# conftest.py
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 from utilities.utils import capture_screenshot
 
 @pytest.fixture()
@@ -30,14 +30,18 @@ def driver():
     chrome_options.add_argument("--disable-blink-features")
     chrome_options.add_argument("--disable-blink-features=AutomationControlled")
 
-    # ✅ Launch browser
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+    # ✅ Launch browser with automatic ChromeDriver matching your current Chrome
+    driver = webdriver.Chrome(
+        service=Service((r"C:\Users\jjjjj\OneDrive\Desktop\Selenium_Project\chromedriver.exe")),  # ✅ No version needed, auto-matched
+        options=chrome_options
+    )
     driver.implicitly_wait(10)
 
     yield driver
 
     print("\n[Teardown] Quitting browser...")
     driver.quit()
+
 
 # ✅ Automatically take screenshot on test failure
 @pytest.hookimpl(hookwrapper=True)
